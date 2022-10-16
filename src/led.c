@@ -6,7 +6,7 @@ int main(void) {
   DDRC = DDRC | (1 << DDC7);
 
   // forever...
-  while (true) {
+  while (1) {
     // set PORTC7
     PORTC = PORTC | (1 << PORTC7);
 
