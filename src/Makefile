@@ -1,4 +1,4 @@
-upload: led.hex
+upload: led.hex venv
 	./venv/bin/python3 reset.py /dev/ttyACM0
 	while :; do
 		sleep 0.5
