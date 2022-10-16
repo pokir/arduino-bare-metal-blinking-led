@@ -20,3 +20,7 @@ build/led.hex: build/led.bin
 
 build:
 	mkdir build
+
+clean:
+	rm -rf build
+	rm -rf venv
