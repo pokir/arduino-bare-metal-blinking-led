@@ -9,6 +9,8 @@ upload: led.hex venv
 
 venv: requirements.txt
 	python3 -m venv venv
+	. ./venv/bin/activate
+	./venv/bin/pip install -r requirements.txt
 
 led.o: led.c
 	avr-gcc -Os -DF_CPU=8000000UL -mmcu=atmega32u4 -c -o led.o led.c
