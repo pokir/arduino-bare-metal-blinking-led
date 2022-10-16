@@ -24,3 +24,15 @@ To set bit `n` of a register:
 
 To unset bit `n` of a register:
 `reg = reg & ~(1 << n)`
+
+
+## Resetting the Circuit Playground automatically
+
+The Circuit Playground needs to be reset (put into bootloader mode) before being able to upload code to it.
+
+## `avr-gcc` and `avrdude`
+
+`avr-gcc` compiles the code for the ATMEGA32u4 microcontroller.
+
+`avrdude` uploads the code to the microcontroller.
+It needs to use the `-c avr109` and `-b 57600` options.
