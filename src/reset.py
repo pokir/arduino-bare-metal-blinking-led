@@ -7,6 +7,7 @@ import serial
 
 
 com = serial.Serial(sys.argv[1], 1200)
+com.dtr = False
 com.close()
 
 # To use (while loop from https://stackoverflow.com/a/46040407):
