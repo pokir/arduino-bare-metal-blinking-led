@@ -1,7 +1,7 @@
 upload: led.hex venv
 	. ./venv/bin/activate
 	./venv/bin/python3 reset.py /dev/ttyACM0
-	while :; do sleep 0.5 [ -c "/dev/ttyACM0" ] && break; done
+	while :; do sleep 0.5; [ -c "/dev/ttyACM0" ] && break; done
 	avrdude -F -V -c avr109 -p atmega32u4 -P /dev/ttyACM0 -b 57600 -U flash:w:led.hex
 
 venv: requirements.txt
