@@ -25,4 +25,3 @@ build:
 
 clean:
 	rm -rf build
-	rm -rf venv
