@@ -1,6 +1,8 @@
 # arduino-bare-metal-blinking-led
 
-Make the red LED on the Circuit Playground blink without using the Arduino IDE.
+Just an educational project to learn more about how Arduino works.
+
+Makes the red LED on the Circuit Playground blink without using the Arduino IDE.
 
 This repository follows [this video](https://www.youtube.com/watch?v=j4xw8QomkXs), but using an Adafruit Circuit Playground instead of an Arduino UNO.
 
