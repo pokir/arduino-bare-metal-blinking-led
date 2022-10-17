@@ -1,8 +1,10 @@
-upload: build/led.hex build/venv
+upload: build/led.hex reset
+	avrdude -F -V -c avr109 -p atmega32u4 -P /dev/ttyACM0 -b 57600 -U flash:w:build/led.hex
+
+reset: build/venv
 	. ./build/venv/bin/activate
 	./build/venv/bin/python3 src/reset.py /dev/ttyACM0
 	while :; do sleep 0.5; [ -c "/dev/ttyACM0" ] && break; done
-	avrdude -F -V -c avr109 -p atmega32u4 -P /dev/ttyACM0 -b 57600 -U flash:w:build/led.hex
 
 build/venv: requirements.txt
 	python3 -m venv build/venv
