@@ -13,3 +13,15 @@ sudo apt-get install avr-libc avrdude binutils-avr gcc-avr
 ## Circuit Playground Documentation
 
 Useful parts for this project of the Circuit Playground documentation and ATMEGA32u4 microcontroller datasheet are in the `./circuit-playground-documentation` folder.
+
+## Uploading to Circuit Playground
+
+```sh
+make
+```
+
+## Cleaning
+
+```sh
+make clean
+```
