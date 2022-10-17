@@ -1,5 +1,7 @@
 # Notes
 
+Notes made while writing the code.
+
 ## Ports
 
 The red LED on the Circuit Playground is pin D13.
