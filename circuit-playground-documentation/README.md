@@ -27,10 +27,13 @@ To set bit `n` of a register:
 To unset bit `n` of a register:
 `reg = reg & ~(1 << n)`
 
-
 ## Resetting the Circuit Playground automatically
 
 The Circuit Playground needs to be reset (put into bootloader mode) before being able to upload code to it.
+
+This is how it is done in the [arduino source code](https://github.com/arduino/arduino-cli/blob/7415e269061ff4d90e6356f6c1156941122d58c3/arduino/serialutils/serialutils.go#L30-L56).
+
+The serial port has to be opened with 1200 baud, dtr has to be turned off and the port has to be closed for the board to reset (bootloader mode).
 
 ## `avr-gcc` and `avrdude`
 
