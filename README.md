@@ -22,6 +22,8 @@ make
 
 ## Cleaning
 
+Clean the files after building/uploading:
+
 ```sh
 make clean
 ```
